@@ -36,4 +36,21 @@ Project {
             qbs.install: true
         }
     }
+
+    CppApplication {
+        name: "maxdecltypedecay"
+
+        consoleApplication: true
+        cpp.cxxLanguageVersion: "c++14"
+
+        files: [
+            "basics/maxdecltypedecay.cpp",
+            "basics/maxdecltypedecay.hpp",
+        ]
+
+        Group {     // Properties for the produced executable
+            fileTagsFilter: product.type
+            qbs.install: true
+        }
+    }
 }
