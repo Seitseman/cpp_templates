@@ -1,56 +1,35 @@
 import qbs
+import "CppApplicationTemplate.qbs" as CppApplicationTemplate
 
 Project {
     minimumQbsVersion: "1.7.1"
 
-    CppApplication {
+    CppApplicationTemplate {
         name: "max1"
-
-        consoleApplication: true
-        cpp.cxxLanguageVersion: "c++1z"
 
         files: [
             "basics/max1.cpp",
             "basics/max1.h",
         ]
-
-        Group {     // Properties for the produced executable
-            fileTagsFilter: product.type
-            qbs.install: true
-        }
     }
 
-    CppApplication {
+    CppApplicationTemplate {
         name: "maxauto"
 
-        consoleApplication: true
         cpp.cxxLanguageVersion: "c++14"
-
         files: [
             "basics/maxauto.h",
             "basics/maxauto.cpp",
         ]
-
-        Group {     // Properties for the produced executable
-            fileTagsFilter: product.type
-            qbs.install: true
-        }
     }
 
-    CppApplication {
+    CppApplicationTemplate {
         name: "maxdecltypedecay"
 
-        consoleApplication: true
         cpp.cxxLanguageVersion: "c++14"
-
         files: [
             "basics/maxdecltypedecay.cpp",
             "basics/maxdecltypedecay.hpp",
         ]
-
-        Group {     // Properties for the produced executable
-            fileTagsFilter: product.type
-            qbs.install: true
-        }
     }
 }
