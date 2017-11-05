@@ -32,4 +32,14 @@ Project {
             "basics/maxdecltypedecay.hpp",
         ]
     }
+
+    CppApplicationTemplate {
+        name: "maxcommon"
+
+        cpp.cxxLanguageVersion: "c++14"
+        files: [
+            "basics/maxcommon.cpp",
+            "basics/maxcommon.hpp",
+        ]
+    }
 }
